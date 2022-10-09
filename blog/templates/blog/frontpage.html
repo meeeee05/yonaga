@@ -18,5 +18,6 @@
 {% for post in posts %}
 <div class="post block">
     <h2 class="subtitle">{{post.title}}</h2>
+    <small>Posted at {{post.posted_date}}</small>
 </div>
 {% endfor %} {% endblock %}
