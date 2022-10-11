@@ -8,7 +8,7 @@ class Post(models.Model):
     body = models.TextField()
     posted_date=models.DateTimeField(auto_now_add=True)
 
-class Comments(models.Model):
+class Comment(models.Model):
     post = models.ForeignKey(
         Post, related_name="comments", on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
