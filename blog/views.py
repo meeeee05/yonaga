@@ -8,11 +8,11 @@ def frontpage(request):
 
     return render(request,"blog/frontpage.html",{"posts":posts})
 
-def post_detail(request,slug):
+def post_detail(request, slug):
     post= Post.objects.get(slug=slug)
 
     if request.method == "POST":
-        form =CommentForm(request.POST)
+        form = CommentForm(request.POST)
 
         if form.is_valid():
             comment = form.save(commit=False)
