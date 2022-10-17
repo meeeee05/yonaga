@@ -6,7 +6,7 @@ class Post(models.Model):
     slug = models.SlugField()
     intro = models.TextField()
     body = models.TextField()
-    posted_date=models.DateTimeField(auto_now_add=True)
+    posted_date = models.DateTimeField(auto_now_add=True)
 
 class Comment(models.Model):
     post = models.ForeignKey(
