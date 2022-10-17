@@ -1,3 +1,4 @@
+from email.policy import default
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
@@ -6,6 +7,7 @@ class Post(models.Model):
     slug = models.SlugField()
     intro = models.TextField()
     body = models.TextField()
+    like = models.IntegerField(default=0)
     posted_date = models.DateTimeField(auto_now_add=True)
 
 class Comment(models.Model):

@@ -21,6 +21,6 @@
     <small>Posted at {{post.posted_date}}</small>
     <p>{{post.intro}}</p>
     <a href="{% url 'post_detail' post.slug %}">もっと読む</a>
-
+    <p>{{post.like}}件のいいね</p>
 </div>
 {% endfor %} {% endblock %}
