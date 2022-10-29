@@ -81,8 +81,10 @@ WSGI_APPLICATION = 'microblog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': env('DATABASE_ENGINE'), # 変更
+        'NAME': env('DATABASE_NAME'), # プロジェクトで使用するデータベース名
+        'USER': env('DATABASE_USER'), # パソコンにインストールしたMySQLのユーザー名
+        'PASSWORD': env('DATABASE_PASSWORD'), # 同上。そのパスワード
     }
 }
 
